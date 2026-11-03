@@ -448,8 +448,6 @@ margin-bottom: 2rem;
     color: #777 !important;
 }
 
-
-
 /* =========================
 POPUP PESANAN
 ========================= */
@@ -1101,107 +1099,118 @@ transform:translateY(-1px);
 }
 
 
-/*media query*/
 
+/* =========================
+   RESPONSIVE LAPTOP
+========================= */
 
-
-
-/*laptop*/
-
-@media (max-width: 1366px){
+@media (max-width: 1366px) {
     html {
         font-size: 75%;
     }
 }
 
-/*tablet*/
+/* =========================
+   RESPONSIVE TABLET
+========================= */
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+
     html {
         font-size: 60.5%;
-
-
     }
-    
+
     #menu {
         display: inline-block;
     }
-    
+
     .navbar .navbar-nav {
         position: absolute;
         top: 100%;
         right: -100%;
-     background-color: #fff;
-     width: 30rem;
-     height: 100vh;
-     transition: 0.3s;
-   
+        background-color: #fff;
+        width: 30rem;
+        max-width: 85vw;
+        height: 100vh;
+        transition: 0.3s;
     }
 
-   
-   
-   .navbar .navbar-nav a{
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-   }
-   .navbar .navbar-nav ::after{
-    transform-origin: 0 0;
-   }
-   .navbar .navbar-nav a:hover::after{
-    transform:scaleX(0.2);
-   }
-   .about {
-    padding: 8rem 7% 5rem;
-}
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
 
-.about-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-}
+    .navbar .navbar-nav ::after {
+        transform-origin: 0 0;
+    }
 
-.about-content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    margin-bottom: 1.8rem;
-}
-.about-features {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-}
-@media (max-width: 768px) {
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about {
+        padding: 8rem 7% 5rem;
+    }
+
+    .about-content h2 {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 1.8rem;
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
     .contact-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Mencegah scroll horizontal akibat animasi */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
 }
 
+/* =========================
+   RESPONSIVE HP
+========================= */
 
+@media (max-width: 450px) {
 
-/*android*/
-
-@media (max-width: 450px){
     html {
         font-size: 50%;
     }
+
     .about {
-    padding: 8rem 6% 4rem;
-}
+        padding: 8rem 6% 4rem;
+    }
 
-.about-content h2 {
-    font-size: 2.8rem;
-}
+    .about-content h2 {
+        font-size: 2.8rem;
+    }
 
-.about-content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    text-align: left;
-}
-.about-features {
-    grid-template-columns: 1fr;
-}
-@media (max-width: 450px) {
+    .about-content p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
     .contact-container {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -1211,3 +1220,5 @@ transform:translateY(-1px);
         padding: 2rem 1rem;
     }
 }
+
+
