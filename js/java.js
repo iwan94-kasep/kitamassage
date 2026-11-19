@@ -242,7 +242,7 @@ if (!terapis) {
 }
 
 
-const nomorWA = "6285172311029";
+const nomorWA = "6285152288038";
 
 
 const pesan =
